@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1182D72127CF59050084ED7E /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182D72027CF59050084ED7E /* CameraManager.swift */; };
+		1182D72327CF62D20084ED7E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182D72227CF62D20084ED7E /* CameraView.swift */; };
 		11B2F9C727C64F2E0073F145 /* qrscannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2F9C627C64F2E0073F145 /* qrscannerApp.swift */; };
 		11B2F9C927C64F2E0073F145 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2F9C827C64F2E0073F145 /* ContentView.swift */; };
 		11B2F9CB27C64F2F0073F145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B2F9CA27C64F2F0073F145 /* Assets.xcassets */; };
 		11B2F9CE27C64F2F0073F145 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B2F9CD27C64F2F0073F145 /* Preview Assets.xcassets */; };
+		4F0A377A0832543DE149D411 /* Pods_qrscanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2AE6D0F053071EA10D453 /* Pods_qrscanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1182D72027CF59050084ED7E /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		1182D72227CF62D20084ED7E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		11B2F9C327C64F2E0073F145 /* qrscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qrscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B2F9C627C64F2E0073F145 /* qrscannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrscannerApp.swift; sourceTree = "<group>"; };
 		11B2F9C827C64F2E0073F145 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11B2F9CA27C64F2F0073F145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11B2F9CD27C64F2F0073F145 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		133EE71FB4278506D4ED4DDC /* Pods-qrscanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qrscanner.release.xcconfig"; path = "Target Support Files/Pods-qrscanner/Pods-qrscanner.release.xcconfig"; sourceTree = "<group>"; };
+		959F74922011223C7DDB6AE3 /* Pods-qrscanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qrscanner.debug.xcconfig"; path = "Target Support Files/Pods-qrscanner/Pods-qrscanner.debug.xcconfig"; sourceTree = "<group>"; };
+		DED2AE6D0F053071EA10D453 /* Pods_qrscanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qrscanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0A377A0832543DE149D411 /* Pods_qrscanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +46,8 @@
 			children = (
 				11B2F9C527C64F2E0073F145 /* qrscanner */,
 				11B2F9C427C64F2E0073F145 /* Products */,
+				488DB96666864F2121FF6DAF /* Pods */,
+				48ED927BC6F2C9503C77D77B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +66,8 @@
 				11B2F9C827C64F2E0073F145 /* ContentView.swift */,
 				11B2F9CA27C64F2F0073F145 /* Assets.xcassets */,
 				11B2F9CC27C64F2F0073F145 /* Preview Content */,
+				1182D72027CF59050084ED7E /* CameraManager.swift */,
+				1182D72227CF62D20084ED7E /* CameraView.swift */,
 			);
 			path = qrscanner;
 			sourceTree = "<group>";
@@ -67,6 +80,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		488DB96666864F2121FF6DAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				959F74922011223C7DDB6AE3 /* Pods-qrscanner.debug.xcconfig */,
+				133EE71FB4278506D4ED4DDC /* Pods-qrscanner.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		48ED927BC6F2C9503C77D77B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DED2AE6D0F053071EA10D453 /* Pods_qrscanner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11B2F9D127C64F2F0073F145 /* Build configuration list for PBXNativeTarget "qrscanner" */;
 			buildPhases = (
+				4B98E175F46AD85A6074FC02 /* [CP] Check Pods Manifest.lock */,
 				11B2F9BF27C64F2E0073F145 /* Sources */,
 				11B2F9C027C64F2E0073F145 /* Frameworks */,
 				11B2F9C127C64F2E0073F145 /* Resources */,
+				3DBEF834324465BB260D9060 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +164,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DBEF834324465BB260D9060 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-qrscanner/Pods-qrscanner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-qrscanner/Pods-qrscanner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-qrscanner/Pods-qrscanner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B98E175F46AD85A6074FC02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-qrscanner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11B2F9BF27C64F2E0073F145 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				11B2F9C927C64F2E0073F145 /* ContentView.swift in Sources */,
+				1182D72127CF59050084ED7E /* CameraManager.swift in Sources */,
 				11B2F9C727C64F2E0073F145 /* qrscannerApp.swift in Sources */,
+				1182D72327CF62D20084ED7E /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +258,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -243,6 +320,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -254,6 +332,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -263,14 +342,20 @@
 		};
 		11B2F9D227C64F2F0073F145 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959F74922011223C7DDB6AE3 /* Pods-qrscanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"qrscanner/Preview Content\"";
+				DEVELOPMENT_TEAM = W6PESGXW9M;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Can I use the camera please?";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSPrincipalClass = "Can I use the mic please?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -291,14 +376,20 @@
 		};
 		11B2F9D327C64F2F0073F145 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 133EE71FB4278506D4ED4DDC /* Pods-qrscanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"qrscanner/Preview Content\"";
+				DEVELOPMENT_TEAM = W6PESGXW9M;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Can I use the camera please?";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "";
+				INFOPLIST_KEY_NSPrincipalClass = "Can I use the mic please?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

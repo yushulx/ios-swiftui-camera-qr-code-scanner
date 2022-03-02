@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import DynamsoftCameraEnhancer
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack(alignment: .leading) {
+            CameraView()
+                Spacer()
+            VStack() {
+                Text("iOS QR Code Scanner").font(.title).foregroundColor(.orange)
+                Spacer()
+            }
+        }
     }
 }
 
