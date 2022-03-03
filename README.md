@@ -24,5 +24,5 @@ The sample demonstrates how to quickly implement iOS camera preview using [Swift
     ![iOS camera access permission](https://www.dynamsoft.com/codepool/img/2022/03/ios-camera-access-permission.png)
     
 4. Connect an iPhone or iPad to run the app. 
-       ![ios swiftui camera qr code scanner](https://www.dynamsoft.com/codepool/img/2022/03/ios-swiftui-camera-qr-code-scanner.jpg)
-
+    
+    https://user-images.githubusercontent.com/2202306/156506394-7fccfdd2-5be6-4533-883c-b694034a2afa.mp4
