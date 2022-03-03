@@ -15,6 +15,14 @@ The sample demonstrates how to quickly implement iOS camera preview using [Swift
     ```
     
 2. Open `Signing & Capabilities` editor to select a team.
-3. Connect an iPhone or iPad to run the app. 
+3. There is no `Info.plist` file in Xcode 13.2.1. You need to add the key to `TARGETS > Info`:
+    
+    ```xml
+    Privacy - Camera Usage Description
+    ```
+
+    ![iOS camera access permission](https://www.dynamsoft.com/codepool/img/2022/03/ios-camera-access-permission.png)
+    
+4. Connect an iPhone or iPad to run the app. 
 
 
