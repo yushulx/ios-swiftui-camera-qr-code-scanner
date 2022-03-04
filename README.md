@@ -34,3 +34,6 @@ The sample demonstrates how to quickly implement an iOS QR code scanner app usin
 5. Connect an iPhone or iPad to run the app. 
     
     https://user-images.githubusercontent.com/2202306/156506394-7fccfdd2-5be6-4533-883c-b694034a2afa.mp4
+    
+## Blog
+[Building iOS QR Code Scanner with SwiftUI on M1 Mac](https://www.dynamsoft.com/codepool/ios-qr-code-scanner-swiftui-m1-mac.html)
