@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
-import DynamsoftCameraEnhancer
 
 struct ContentView: View {
     @ObservedObject private var cameraManager = CameraManager(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
     
     var body: some View {
         ZStack() {
-            CameraView(cameraManager: cameraManager)
+            DynamsoftCameraView(cameraManager: cameraManager).onAppear() {
+                cameraManager.viewDidAppear()
+            }.onDisappear(){
+                cameraManager.viewDidDisappear()
+            }
             VStack {
                 Text("iOS QR Code Scanner").font(.title).foregroundColor(.orange)
                 Spacer()

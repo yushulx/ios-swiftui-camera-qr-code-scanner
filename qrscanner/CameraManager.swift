@@ -7,51 +7,75 @@
 
 import Foundation
 import UIKit
-import DynamsoftBarcodeReader
 import DynamsoftCameraEnhancer
+import DynamsoftCaptureVisionRouter
+import DynamsoftBarcodeReader
+import DynamsoftCore
 
-class CameraManager: NSObject, ObservableObject, DCEFrameListener {
+class CameraManager: NSObject, ObservableObject, CapturedResultReceiver {
     
     @Published var results = "No QR Code found"
-    private var dce: DynamsoftCameraEnhancer! = nil
-    private var dceView: DCECameraView! = nil
-    private var barcodeReader: DynamsoftBarcodeReader! = nil
+    private var cameraView:CameraView!
+    private var dce = CameraEnhancer()
+    private var cvr = CaptureVisionRouter()
     
     init(frame: CGRect) {
         super.init()
-        configureDCE(frame: frame)
-        // To activate the sdk, apply for a license key: https://www.dynamsoft.com/customer/license/trialLicense?product=dbr
-        barcodeReader = DynamsoftBarcodeReader.init(license: "LICENSE-KEY")
+        setUpCamera(frame: frame)
+        setUpDCV()
+    }
+
+    func setUpCamera(frame: CGRect) {
+        cameraView = .init(frame: frame)
+        cameraView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        dce.cameraView = cameraView
     }
     
-    func configureDCE(frame: CGRect) {
-      dceView = DCECameraView.init(frame: frame)
-      dce = DynamsoftCameraEnhancer.init(view: dceView)
-      dce.open()
-      dce.setFrameRate(30)
-        dce.addListener(self)
+    func setUpDCV() {
+        // Set the camera enhancer as the input.
+        try! cvr.setInput(dce)
+        // Add CapturedResultReceiver to receive the result callback when a video frame is processed.
+        cvr.addResultReceiver(self)
     }
     
-    func getCameraView() -> DCECameraView { 
-        return dceView
+    func getCameraView() -> CameraView { 
+        return cameraView
     }
-    
-    func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval) {
-        var image:UIImage!
-        image = frame.toUIImage()
-        let results = try! barcodeReader.decode(image, withTemplate: "")
-        var output = "No QR Code found"
-        if (results.count > 0) {
-            output = ""
-            for item in results {
-                let format = item.barcodeFormatString ?? ""
-                let text = item.barcodeText ?? ""
-                output += "Format: " + format + ", Text: " + text + " \n\n "
+
+    func onDecodedBarcodesReceived(_ result: DecodedBarcodesResult) {
+        var message = ""
+        
+        if let items = result.items, items.count > 0 {
+            for item in items {
+                message += String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
             }
         }
         
         DispatchQueue.main.async {
-            self.results = output
+            self.results = message
         }
+    }
+    
+    private func showResult(_ title: String, _ message: String?, completion: (() -> Void)? = nil) {
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in completion?() }))
+            }
+        }
+    
+    func viewDidAppear() {
+        dce.open()
+        cvr.startCapturing(PresetTemplate.readBarcodes.rawValue) { isSuccess, error in
+            if (!isSuccess) {
+                if let error = error {
+                    self.showResult("Error", error.localizedDescription)
+                }
+            }
+        }
+    }
+
+    func viewDidDisappear() {
+        dce.close()
+        cvr.stopCapturing()
     }
 }

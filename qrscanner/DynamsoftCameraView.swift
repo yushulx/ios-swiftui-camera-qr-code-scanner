@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 import DynamsoftCameraEnhancer
 
-struct CameraView: UIViewRepresentable {
+struct DynamsoftCameraView: UIViewRepresentable {
     var cameraManager: CameraManager
-    func makeUIView(context: Context) -> DCECameraView {
+    func makeUIView(context: Context) -> CameraView {
         let dceView = cameraManager.getCameraView()
         return dceView
     }
 
-    func updateUIView(_ uiView: DCECameraView, context: Context) {
+    func updateUIView(_ uiView: CameraView, context: Context) {
         
     }
 }

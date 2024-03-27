@@ -8,23 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		1182D72127CF59050084ED7E /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182D72027CF59050084ED7E /* CameraManager.swift */; };
-		1182D72327CF62D20084ED7E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182D72227CF62D20084ED7E /* CameraView.swift */; };
+		1182D72327CF62D20084ED7E /* DynamsoftCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182D72227CF62D20084ED7E /* DynamsoftCameraView.swift */; };
 		11B2F9C727C64F2E0073F145 /* qrscannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2F9C627C64F2E0073F145 /* qrscannerApp.swift */; };
 		11B2F9C927C64F2E0073F145 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B2F9C827C64F2E0073F145 /* ContentView.swift */; };
 		11B2F9CB27C64F2F0073F145 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B2F9CA27C64F2F0073F145 /* Assets.xcassets */; };
 		11B2F9CE27C64F2F0073F145 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B2F9CD27C64F2F0073F145 /* Preview Assets.xcassets */; };
+		47C3ABE12BB3F10A005A4326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C3ABE02BB3F10A005A4326 /* AppDelegate.swift */; };
 		4F0A377A0832543DE149D411 /* Pods_qrscanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED2AE6D0F053071EA10D453 /* Pods_qrscanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1182D72027CF59050084ED7E /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
-		1182D72227CF62D20084ED7E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		1182D72227CF62D20084ED7E /* DynamsoftCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamsoftCameraView.swift; sourceTree = "<group>"; };
 		11B2F9C327C64F2E0073F145 /* qrscanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = qrscanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B2F9C627C64F2E0073F145 /* qrscannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qrscannerApp.swift; sourceTree = "<group>"; };
 		11B2F9C827C64F2E0073F145 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11B2F9CA27C64F2F0073F145 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11B2F9CD27C64F2F0073F145 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		133EE71FB4278506D4ED4DDC /* Pods-qrscanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qrscanner.release.xcconfig"; path = "Target Support Files/Pods-qrscanner/Pods-qrscanner.release.xcconfig"; sourceTree = "<group>"; };
+		47C3ABE02BB3F10A005A4326 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959F74922011223C7DDB6AE3 /* Pods-qrscanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qrscanner.debug.xcconfig"; path = "Target Support Files/Pods-qrscanner/Pods-qrscanner.debug.xcconfig"; sourceTree = "<group>"; };
 		DED2AE6D0F053071EA10D453 /* Pods_qrscanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qrscanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -62,12 +64,13 @@
 		11B2F9C527C64F2E0073F145 /* qrscanner */ = {
 			isa = PBXGroup;
 			children = (
+				47C3ABE02BB3F10A005A4326 /* AppDelegate.swift */,
 				11B2F9C627C64F2E0073F145 /* qrscannerApp.swift */,
 				11B2F9C827C64F2E0073F145 /* ContentView.swift */,
 				11B2F9CA27C64F2F0073F145 /* Assets.xcassets */,
 				11B2F9CC27C64F2F0073F145 /* Preview Content */,
 				1182D72027CF59050084ED7E /* CameraManager.swift */,
-				1182D72227CF62D20084ED7E /* CameraView.swift */,
+				1182D72227CF62D20084ED7E /* DynamsoftCameraView.swift */,
 			);
 			path = qrscanner;
 			sourceTree = "<group>";
@@ -214,7 +217,8 @@
 				11B2F9C927C64F2E0073F145 /* ContentView.swift in Sources */,
 				1182D72127CF59050084ED7E /* CameraManager.swift in Sources */,
 				11B2F9C727C64F2E0073F145 /* qrscannerApp.swift in Sources */,
-				1182D72327CF62D20084ED7E /* CameraView.swift in Sources */,
+				47C3ABE12BB3F10A005A4326 /* AppDelegate.swift in Sources */,
+				1182D72327CF62D20084ED7E /* DynamsoftCameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
