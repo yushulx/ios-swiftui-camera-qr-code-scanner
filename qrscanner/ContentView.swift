@@ -22,7 +22,7 @@ struct ContentView: View {
                 Spacer()
             }
             
-            Text(cameraManager.results).font(.subheadline).foregroundColor(.blue).fontWeight(.heavy)
+//            Text(cameraManager.results).font(.subheadline).foregroundColor(.blue).fontWeight(.heavy)
             
         }
     }

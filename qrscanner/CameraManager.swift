@@ -28,6 +28,8 @@ class CameraManager: NSObject, ObservableObject, CapturedResultReceiver {
     func setUpCamera(frame: CGRect) {
         cameraView = .init(frame: frame)
         cameraView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        let layer = cameraView.getDrawingLayer(DrawingLayerId.DBR.rawValue)
+        layer?.visible = true
         dce.cameraView = cameraView
     }
     
@@ -46,8 +48,13 @@ class CameraManager: NSObject, ObservableObject, CapturedResultReceiver {
         var message = ""
         
         if let items = result.items, items.count > 0 {
+            let layer = cameraView.getDrawingLayer(DrawingLayerId.DBR.rawValue)
+            layer?.clearDrawingItems()
             for item in items {
                 message += String(format:"\nFormat: %@\nText: %@\n", item.formatString, item.text)
+                let quadDrawingItem = QuadDrawingItem.init(quadrilateral: item.location)
+                let textDrawingItem = TextDrawingItem.init(text: item.text, topLeftPoint: item.location.points[0] as! CGPoint, width: 100, height: 10)
+                layer?.addDrawingItems([quadDrawingItem, textDrawingItem])
             }
         }
         
