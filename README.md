@@ -5,7 +5,7 @@ The sample demonstrates how to quickly implement an iOS Barcode QR code scanner 
 - DynamsoftCameraEnhancer 4.0.2
 - Dynamsoft Barcode Reader 10.0.21
    
-   A valid license key is required for the barcode SDK. Click [here](https://www.dynamsoft.com/customer/license/trialLicense?product=dbr) to apply for a 30-day FREE Trial license.
+   A valid license key is required for the barcode SDK. Click [here](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform) to apply for a 30-day FREE Trial license.
 
 ## Usage
 1. Install the dependencies and then open the project in Xcode:
